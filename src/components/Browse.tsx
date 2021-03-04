@@ -2,11 +2,7 @@ import React from 'react';
 import Hero from './Hero';
 import TitleList from './TitleList';
 
-export interface BrowseProps {
-  searchUrl: string;
-}
-
-const Browse: React.FC<BrowseProps> = props => (
+const Browse: React.FC = () => (
   <div>
     <Hero />
     <TitleList title="Top TV picks for Jack" url="discover/tv?sort_by=popularity.desc&page=1" />
