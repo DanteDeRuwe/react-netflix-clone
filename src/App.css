@@ -1,23 +1,91 @@
-@import "https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900";
-@import "https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css";
+@import 'https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900';
+@import 'https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css';
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -26,21 +94,34 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
   display: block;
 }
 body {
   line-height: 1;
 }
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
-blockquote, q {
+blockquote,
+q {
   quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
   content: '';
   content: none;
 }
@@ -48,14 +129,15 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-@import "https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900";
+@import 'https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900';
 body {
   background: #221f1f;
   color: #ffffff;
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 
-h2, .TitleList .Title {
+h2,
+.TitleList .Title {
   font-size: 24px;
   font-weight: 600;
   line-height: 1.4;
@@ -94,19 +176,19 @@ p {
   width: 151px;
   height: 41px;
   margin-right: 10px;
-  -webkit-transition: margin .125s ease;
-  transition: margin .125s ease;
+  -webkit-transition: margin 0.125s ease;
+  transition: margin 0.125s ease;
 }
 .Logo svg {
   -webkit-transform: scale(0.5);
-          transform: scale(0.5);
+  transform: scale(0.5);
   -webkit-transform-origin: 0 0;
-          transform-origin: 0 0;
+  transform-origin: 0 0;
 }
 .Logo svg path {
   fill: #e50914;
-  -webkit-transition: fill .125s ease;
-  transition: fill .125s ease;
+  -webkit-transition: fill 0.125s ease;
+  transition: fill 0.125s ease;
 }
 .Logo:hover {
   cursor: pointer;
@@ -124,16 +206,16 @@ p {
   height: 37px;
   -webkit-box-align: center;
   -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding: 0 10px;
 }
 .Navigation ul li {
   font-weight: 400;
   padding: 7px 10px;
   font-size: 14px;
-  -webkit-transition: background .125s ease;
-  transition: background .125s ease;
+  -webkit-transition: background 0.125s ease;
+  transition: background 0.125s ease;
   border-radius: 3px;
 }
 .Navigation ul li:hover {
@@ -144,27 +226,27 @@ p {
 .Search {
   -webkit-box-align: center;
   -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   width: 100%;
   position: absolute;
-  left:0;
+  left: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   pointer-events: none;
 }
 .Search input {
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
   font-weight: 300;
   font-size: 14px;
   height: 37px;
@@ -172,16 +254,16 @@ p {
   background: transparent;
   color: #ffffff;
   -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   border: 0;
   border: 2px solid rgba(245, 245, 241, 0.1);
   outline: none;
   border-radius: 37px;
   padding: 0 10px;
   pointer-events: all;
-  -webkit-transition: border .25s ease, width .125s ease .125s;
-  transition: border .25s ease, width .125s ease .125s;
+  -webkit-transition: border 0.25s ease, width 0.125s ease 0.125s;
+  transition: border 0.25s ease, width 0.125s ease 0.125s;
 }
 .Search input:focus {
   border: 2px solid #e50914;
@@ -205,8 +287,8 @@ p {
   height: 44px;
   box-sizing: border-box;
   border: 3px solid transparent;
-  -webkit-transition: border .125s ease;
-  transition: border .125s ease;
+  -webkit-transition: border 0.125s ease;
+  transition: border 0.125s ease;
 }
 .UserProfile .User .image img {
   width: 100%;
@@ -215,8 +297,8 @@ p {
 .UserProfile .User .name {
   -webkit-box-align: center;
   -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -239,14 +321,14 @@ p {
   width: 100%;
   position: relative;
   background-size: cover;
-  min-height: 800px;
+  min-height: 600px;
 }
 .Hero .content {
   position: relative;
   z-index: 4;
   width: 500px;
   left: 10vw;
-  top: 10vw;
+  top: 200px;
 }
 .Hero .content .logo {
   max-width: 400px;
@@ -283,7 +365,7 @@ p {
   left: 0;
   width: 100%;
   -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 .Button {
@@ -295,12 +377,12 @@ p {
   height: 44px;
   -webkit-box-align: center;
   -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   text-decoration: none;
   color: #ffffff;
   padding: 20px;
@@ -309,8 +391,8 @@ p {
   border-radius: 44px;
   font-size: 14px;
   font-weight: 600;
-  -webkit-transition: border .125s ease, background .125s ease;
-  transition: border .125s ease, background .125s ease;
+  -webkit-transition: border 0.125s ease, background 0.125s ease;
+  transition: border 0.125s ease, background 0.125s ease;
 }
 .Button:hover {
   border: 2px solid #f5f5f1;
@@ -322,10 +404,10 @@ p {
   background: #e50914;
 }
 
-.Hero {
+/* .Hero {
   margin-bottom: -15vw;
  
-}
+} */
 
 .TitleList {
   padding: 20px 40px;
@@ -342,18 +424,23 @@ p {
   display: -ms-flexbox;
   display: flex;
   -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   margin: 20px 0;
   width: calc(100vw - 80px);
   box-sizing: border-box;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 .TitleList[data-loaded='true'] {
   opacity: 1;
+  display: '';
+}
+
+.TitleList[data-loaded='false'] {
+  display: none;
 }
 
 .Item {
@@ -362,8 +449,8 @@ p {
   background-color: #000000;
   -webkit-box-flex: 1;
   -webkit-flex: 1 0 auto;
-      -ms-flex: 1 0 auto;
-          flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
   background-position: center;
   background-size: 100%;
   height: 200px;
@@ -373,7 +460,7 @@ p {
   -webkit-transition: background 1s ease;
   transition: background 1s ease;
 }
-.Item:nth-child(n+6) {
+.Item:nth-child(n + 6) {
   margin-top: 20px;
 }
 .Item:last-child {
@@ -392,21 +479,21 @@ p {
   height: 100%;
   pointer-events: none;
   opacity: 0;
-  -webkit-transition: opacity .125s ease;
-  transition: opacity .125s ease;
+  -webkit-transition: opacity 0.125s ease;
+  transition: opacity 0.125s ease;
 }
 .Item .overlay .title {
   font-size: 22px;
   font-weight: 200;
   opacity: 0;
-  -webkit-transition: opacity .25s ease;
-  transition: opacity .25s ease;
+  -webkit-transition: opacity 0.25s ease;
+  transition: opacity 0.25s ease;
 }
 .Item .overlay .rating {
   font-size: 14px;
   opacity: 0;
-  -webkit-transition: opacity .25s ease .125s;
-  transition: opacity .25s ease .125s;
+  -webkit-transition: opacity 0.25s ease 0.125s;
+  transition: opacity 0.25s ease 0.125s;
 }
 .Item .overlay .plot {
   font-size: 14px;
@@ -419,8 +506,8 @@ p {
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
-  -webkit-transition: margin .25s ease .125s, opacity .25s ease .25s;
-  transition: margin .25s ease .125s, opacity .25s ease .25s;
+  -webkit-transition: margin 0.25s ease 0.125s, opacity 0.25s ease 0.25s;
+  transition: margin 0.25s ease 0.125s, opacity 0.25s ease 0.25s;
 }
 .Item:hover {
   background-size: 150%;
@@ -461,11 +548,11 @@ p {
 .ListToggle:hover div {
   top: -32px;
 }
-.ListToggle[data-toggled="true"] {
+.ListToggle[data-toggled='true'] {
   background: #e50914;
   border: 2px solid #e50914;
 }
-.ListToggle[data-toggled="true"] div {
+.ListToggle[data-toggled='true'] div {
   top: -32px;
 }
 .ListToggle div {
@@ -474,8 +561,8 @@ p {
   left: 0;
   height: 64px;
   width: 32px;
-  -webkit-transition: .125s ease;
-  transition: .125s ease;
+  -webkit-transition: 0.125s ease;
+  transition: 0.125s ease;
 }
 .ListToggle div i {
   display: -webkit-box;
@@ -484,12 +571,12 @@ p {
   display: flex;
   -webkit-box-align: center;
   -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   height: 32px;
   width: 32px;
 }
