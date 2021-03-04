@@ -6,7 +6,7 @@ const Navigation: React.FC = () => (
     <nav>
       <ul>
         <li>
-          <Link to="/">Browse</Link>
+          <Link to="/browse">Browse</Link>
         </li>
         <li>
           <Link to="/top-picks">Top Picks</Link>

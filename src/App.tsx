@@ -28,7 +28,7 @@ export class App extends React.Component<{}, AppState> {
           <Search onSearchChange={url => this.setState({ searchUrl: url })} />
           <UserProfile />
         </header>
-        <Route path={['/', 'home', 'browse']} component={Browse} />
+        <Route path={['/', '/home', '/browse']} exact component={Browse} />
       </Router>
     );
   }
