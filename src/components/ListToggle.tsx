@@ -5,22 +5,18 @@ export interface ListToggleState {
 }
 
 export default class ListToggle extends React.Component<{}, ListToggleState> {
-  constructor(state: ListToggleState) {
-    super(state);
+  constructor(props) {
+    super(props);
     this.state = { toggled: false };
   }
 
-  handleClick() {
-    if (this.state.toggled === true) {
-      this.setState({ toggled: false });
-    } else {
-      this.setState({ toggled: true });
-    }
-  }
+  toggle = () => {
+    this.setState({ toggled: !this.state.toggled });
+  };
 
   render() {
     return (
-      <div onClick={this.handleClick} data-toggled={this.state.toggled} className="ListToggle">
+      <div onClick={this.toggle} data-toggled={this.state.toggled} className="ListToggle">
         <div>
           <i className="fa fa-fw fa-plus"></i>
           <i className="fa fa-fw fa-check"></i>

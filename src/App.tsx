@@ -14,21 +14,21 @@ export interface AppState {
 export class App extends React.Component<{}, AppState> {
   apiKey: string = '87dfa1c669eea853da609d4968d294be';
 
-  constructor(state: AppState) {
-    super(state);
+  constructor(props) {
+    super(props);
     this.state = { searchTerm: '', searchUrl: '' };
   }
 
-  handleKeyUp(e) {
+  handleKeyUp = e => {
     if (e.key === 'Enter' && this.state.searchTerm !== '') {
       var searchUrl = 'search/multi?query=' + this.state.searchTerm + '&api_key=' + this.apiKey;
       this.setState({ searchUrl: searchUrl });
     }
-  }
+  };
 
-  handleChange(e) {
+  handleChange = e => {
     this.setState({ searchTerm: e.target.value });
-  }
+  };
 
   render() {
     return (
