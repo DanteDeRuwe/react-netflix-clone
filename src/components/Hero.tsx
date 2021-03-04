@@ -1,5 +1,5 @@
 import * as React from 'react';
-import HeroButton from './HeroButton';
+import HeroButton from './header/HeroButton';
 
 const Hero: React.FC = () => (
   <div

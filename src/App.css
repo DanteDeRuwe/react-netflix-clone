@@ -218,6 +218,12 @@ p {
   transition: background 0.125s ease;
   border-radius: 3px;
 }
+
+.Navigation ul li a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .Navigation ul li:hover {
   background: #e50914;
   cursor: pointer;
