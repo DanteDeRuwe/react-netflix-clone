@@ -17,10 +17,15 @@ export default class Search extends React.Component<SearchProps, SearchState> {
     }
   
     handleKeyUp = e => {
-      if (e.key === 'Enter' && this.state.searchTerm !== '') {
-        var searchUrl = 'search/multi?query=' + this.state.searchTerm + '&api_key=' + this.apiKey;
-        this.props.onSearchChange(searchUrl);
-      }
+        if(this.state.searchTerm === ""){
+            this.props.onSearchChange(null);
+            return;
+        }
+        
+        if (e.key === 'Enter') {
+            var searchUrl = 'search/multi?query=' + this.state.searchTerm + '&api_key=' + this.apiKey;
+            this.props.onSearchChange(searchUrl);
+        }
     };
   
     handleChange = e => {
