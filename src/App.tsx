@@ -6,6 +6,7 @@ import Search from './components/header/Search';
 import UserProfile from './components/header/UserProfile';
 import Browse from './components/Browse';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
+import SearchResults from './components/SearchResults';
 
 export interface AppState {
   searchUrl: string;
@@ -28,6 +29,7 @@ export class App extends React.Component<{}, AppState> {
           <Search onSearchChange={url => this.setState({ searchUrl: url })} />
           <UserProfile />
         </header>
+        <SearchResults searchUrl={this.state.searchUrl}></SearchResults>
         <Route path={['/', '/home', '/browse']} exact component={Browse} />
       </Router>
     );

@@ -1,50 +1,44 @@
 import * as React from 'react';
 
-export interface SearchState {
-    searchTerm: string;
-    searchUrl: string;
-}
 export interface SearchProps {
-    onSearchChange: any;
+  onSearchChange: Function;
 }
 
-export default class Search extends React.Component<SearchProps, SearchState> {
-    apiKey: string = '87dfa1c669eea853da609d4968d294be';
-  
-    constructor(props) {
-      super(props);
-      this.state = { searchTerm: '', searchUrl: '' };
-    }
-  
-    handleKeyUp = e => {
-        if(this.state.searchTerm === ""){
-            this.props.onSearchChange(null);
-            return;
-        }
-        
-        if (e.key === 'Enter') {
-            var searchUrl = 'search/multi?query=' + this.state.searchTerm + '&api_key=' + this.apiKey;
-            this.props.onSearchChange(searchUrl);
-        }
-    };
-  
-    handleChange = e => {
-      this.setState({ searchTerm: e.target.value });
-    };
+const apiKey = '87dfa1c669eea853da609d4968d294be';
 
-    render() {
-        return (
-            <div id="search" className="Search">
-            <input
-            onKeyUp={this.handleKeyUp}
-            onChange={this.handleChange}
-            type="search"
-            placeholder="Search for a title..."
-            value={this.state.searchTerm}
-            />
-      </div>
-        )
-    }
-}
+const Search: React.FC<SearchProps> = props => {
+  const [searchTerm, setSearchTerm] = React.useState('');
 
+  const handleKeyUp = React.useCallback(
+    e => {
+      if (searchTerm === '') {
+        props.onSearchChange(null);
+        return;
+      }
 
+      if (e.key === 'Enter') {
+        var searchUrl = 'search/multi?query=' + searchTerm + '&api_key=' + apiKey;
+        props.onSearchChange(searchUrl);
+      }
+    },
+    [searchTerm, props.onSearchChange]
+  );
+
+  const handleChange = React.useCallback(e => {
+    setSearchTerm(e.target.value);
+  }, []);
+
+  return (
+    <div id="search" className="Search">
+      <input
+        onKeyUp={handleKeyUp}
+        onChange={handleChange}
+        type="search"
+        placeholder="Search for a title..."
+        value={searchTerm}
+      />
+    </div>
+  );
+};
+
+export default Search;

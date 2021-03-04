@@ -276,6 +276,26 @@ p {
   width: 30%;
 }
 
+.SearchResults {
+  width: 100vw;
+  position: fixed;
+  z-index: 999999;
+  top: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.SearchResults .TitleList {
+  padding: 3rem 2rem;
+  background-color: #1a1a1a69;
+  backdrop-filter: blur(10px);
+  border-radius: 1rem;
+}
+
+.SearchResults .TitleList .titles-wrapper {
+  max-width: 50vw;
+}
+
 .UserProfile {
   margin-left: auto;
 }
