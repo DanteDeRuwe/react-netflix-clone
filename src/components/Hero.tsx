@@ -2,7 +2,14 @@ import * as React from 'react';
 import HeroButton from './HeroButton';
 
 const Hero: React.FC = () => (
-  <div id="hero" className="Hero" style={{ backgroundImage: 'url(https://images.alphacoders.com/633/633643.jpg)' }}>
+  <div
+    id="hero"
+    className="Hero"
+    style={{
+      backgroundImage:
+        'url(http://www.maximumwall.com/wp-content/uploads/2016/11/fond-ecran-wallpaper-image-narcos-19.jpg)',
+    }}
+  >
     <div className="content">
       <img className="logo" src="http://www.returndates.com/backgrounds/narcos.logo.png" alt="narcos background" />
       <h2>Season 2 now available</h2>

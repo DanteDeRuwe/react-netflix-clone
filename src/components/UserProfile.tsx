@@ -3,9 +3,9 @@ import * as React from 'react';
 const UserProfile: React.FC = () => (
   <div className="UserProfile">
     <div className="User">
-      <div className="name">Jack Oliver</div>
+      <div className="name">Jane Doe</div>
       <div className="image">
-        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/profile/profile-512_1.jpg" alt="profile" />
+        <img src="https://avataaars.io/?avatarStyle=Circle&topType=LongHairStraight&accessoriesType=Blank&hairColor=BrownDark&facialHairType=Blank&clotheType=BlazerShirt&eyeType=Default&eyebrowType=Default&mouthType=Default&skinColor=Light" />
       </div>
     </div>
   </div>
