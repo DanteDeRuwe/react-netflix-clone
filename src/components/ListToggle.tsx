@@ -1,27 +1,18 @@
 import * as React from 'react';
 
-export interface ListToggleState {
-  toggled: boolean;
-}
+const ListToggle: React.FC = () => {
+  const [toggled, setToggled] = React.useState(false);
 
-export default class ListToggle extends React.Component<{}, ListToggleState> {
-  constructor(props) {
-    super(props);
-    this.state = { toggled: false };
-  }
+  const toggle = React.useCallback(() => setToggled(!toggled), []);
 
-  toggle = () => {
-    this.setState({ toggled: !this.state.toggled });
-  };
-
-  render() {
-    return (
-      <div onClick={this.toggle} data-toggled={this.state.toggled} className="ListToggle">
-        <div>
-          <i className="fa fa-fw fa-plus"></i>
-          <i className="fa fa-fw fa-check"></i>
-        </div>
+  return (
+    <div onClick={toggle} data-toggled={toggled} className="ListToggle">
+      <div>
+        <i className="fa fa-fw fa-plus"></i>
+        <i className="fa fa-fw fa-check"></i>
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
+
+export default ListToggle;
