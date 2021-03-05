@@ -8,32 +8,23 @@ import Browse from './components/Browse';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import SearchResults from './components/SearchResults';
 
-export interface AppState {
-  searchUrl: string;
-}
+const apiKey = '87dfa1c669eea853da609d4968d294be';
 
-export class App extends React.Component<{}, AppState> {
-  constructor(props) {
-    super(props);
-    this.state = { searchUrl: '' };
-  }
+const App: React.FC = () => {
+  const [searchUrl, setSearchUrl] = React.useState('');
 
-  apiKey: string = '87dfa1c669eea853da609d4968d294be';
-
-  render() {
-    return (
-      <Router>
-        <header className="Header">
-          <Logo />
-          <Navigation />
-          <Search onSearchChange={url => this.setState({ searchUrl: url })} />
-          <UserProfile />
-        </header>
-        <SearchResults searchUrl={this.state.searchUrl}></SearchResults>
-        <Route path={['/', '/home', '/browse']} exact component={Browse} />
-      </Router>
-    );
-  }
-}
+  return (
+    <Router>
+      <header className="Header">
+        <Logo />
+        <Navigation />
+        <Search onSearchChange={setSearchUrl} />
+        <UserProfile />
+      </header>
+      <SearchResults searchUrl={searchUrl}></SearchResults>
+      <Route path={['/', '/home', '/browse']} exact component={Browse} />
+    </Router>
+  );
+};
 
 export default App;
